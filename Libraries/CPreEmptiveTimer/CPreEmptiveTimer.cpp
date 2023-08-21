@@ -1,6 +1,11 @@
 #include "Arduino.h"
 #include <CPreEmptiveTimer.h>
 
+CPreEmptiveTimer::CPreEmptiveTimer() {
+  iState = 0;
+  iSubState = 0;
+}
+
 // set the wait time to wait for the timeout;
 //   unsigned long lTime
 //     Start time (most of the time: current time derived from millis()

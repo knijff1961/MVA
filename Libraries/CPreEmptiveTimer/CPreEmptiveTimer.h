@@ -3,7 +3,9 @@
 
 class CPreEmptiveTimer {
   public:
+    CPreEmptiveTimer();
     unsigned int iState;
+    unsigned int iSubState;
     unsigned long lastMillis;
     void setWait(unsigned long lMs, unsigned long lTime);
     void setWaitConst(unsigned long lMs);
