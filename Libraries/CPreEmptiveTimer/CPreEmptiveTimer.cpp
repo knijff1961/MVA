@@ -4,6 +4,19 @@
 CPreEmptiveTimer::CPreEmptiveTimer() {
   iState = 0;
   iSubState = 0;
+  lastMillis = 0;
+}
+
+CPreEmptiveTimer::CPreEmptiveTimer(unsigned long lMs) {
+  iState = 0;
+  iSubState = 0;
+  lastMillis = lMs;
+}
+
+CPreEmptiveTimer::CPreEmptiveTimer(unsigned long lMs, unsigned long lTime) {
+  iState = 0;
+  iSubState = 0;
+  lastMillis = lTime + lMs;
 }
 
 // set the wait time to wait for the timeout;
@@ -28,6 +41,11 @@ void CPreEmptiveTimer::setWaitConst(unsigned long lMs) {
   lastMillis = lastMillis + lMs;
 }
 
+void CPreEmptiveTimer::setNewState(int iNewState, int iNewSubState) {
+  iState = iNewState;
+  iSubState = iNewSubState;
+}
+
 // Test if a timeout has occur
 //    True: a timeout has occur
 //    False: no timeout yet
@@ -50,4 +68,3 @@ bool CPreEmptiveTimer::timeout(unsigned long lTime) {
           return true;
       return false;
 }
-

@@ -1,19 +1,19 @@
 ###############################################
-# Syntax Coloring Map For CDoorServo
+# Syntax Coloring Map For CPreEmptiveTimer
 ###############################################
 
 ###############################################
 # Datatypes (KEYWORD1)
 ###############################################
-CDoorServo	KEYWORD1
+CDebounce	KEYWORD1
 
 ###############################################
 # Methods and Functions (KEYWORD2)
 ###############################################
-begin	    KEYWORD2
-setState	KEYWORD2
-doLoop	    KEYWORD2
-getState	KEYWORD2
+getState	     KEYWORD2
+getDebounceTime	 KEYWORD2
+setDebounceTime	 KEYWORD2
+go	             KEYWORD2
 
 ###############################################
 # Constants (LITERAL1)
